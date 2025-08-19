@@ -146,7 +146,7 @@ CREATE DATABASE student_db
 
 ## Steps
 1. Setup RDS Database
-2. Deploy Backend (Node.js + Express)
-3. Deploy Frontend (HTML + Nginx)
+2. Deploy Backend 
+3. Deploy Frontend 
 4. Configure Security Groups
 5. Test Application
