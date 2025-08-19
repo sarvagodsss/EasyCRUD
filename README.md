@@ -77,3 +77,75 @@ Subnet: PublicSubnet
 Auto-assign Public IP: Enabled
 
 Security Group → Allow SSH (22) + HTTP (80) + All Traffic (3306)
+Step 1: Go to RDS Service
+
+Log in to AWS Console
+
+Search for RDS → Open it
+
+Click Create database
+
+Step 2: Choose Engine
+
+Select a database engine (e.g., MySQL or PostgreSQL)
+
+Choose version
+
+Step 3: Select Template
+
+Free tier (good for practice)
+
+Production (with Multi-AZ, backups, etc.)
+
+Step 4: Configure Settings
+
+DB Identifier → mydb
+
+Master username → admin
+
+Master password → enter a secure password
+
+Step 5: Instance Configuration
+
+Instance class → db.t3.micro (free tier)
+
+Storage → General Purpose SSD (20 GB default)
+
+Step 6: Connectivity
+
+VPC → Select your VPC
+
+Public access → Choose Yes if you want to connect from your laptop
+
+VPC Security Group → Allow inbound MySQL/PostgreSQL port (3306 for MySQL, 5432 for PostgreSQL)
+
+Step 7: Additional Settings
+
+Initial Database Name → mydb01
+
+Enable automatic backups (optional for testing)
+
+Step 8: Create Database
+
+Click Create Database
+
+Wait for status → Available
+CREATE DATABASE student_db
+# Student Registration System (AWS Project)
+
+## Architecture
+- **Frontend** → HTML + JS (EC2 Public Subnet with Nginx)
+- **Backend** → Node.js Express API (EC2 Private Subnet)
+- **Database** → Amazon RDS (MySQL)
+
+## Features
+- Student Registration (Name, Email, Course)
+- View Registered Students
+- Secure 3-Tier AWS Setup
+
+## Steps
+1. Setup RDS Database
+2. Deploy Backend (Node.js + Express)
+3. Deploy Frontend (HTML + Nginx)
+4. Configure Security Groups
+5. Test Application
