@@ -1,4 +1,5 @@
 Student Registration System
+
 🖥️ Step 1: Create VPC
 
 Go to VPC service → Create VPC
